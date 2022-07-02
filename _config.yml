@@ -21,12 +21,12 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy                          # the main title
+title: 栗少                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: 记录成长   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  最小闭环:学习,思考,记录,复习
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://liukjx.github.io'
@@ -40,12 +40,13 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: 栗少杰
+  name: 栗少
   email: liukjx@qq.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/Shaojie90962953      # change to your twitter homepage
     - https://github.com/liukjx       # change to your github homepage
+    - https://space.bilibili.com/293097825
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -72,8 +73,8 @@ google_analytics:
 #
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
-#
-theme_mode:   # [light|dark]
+#theme_mode:   # [light|dark]
+theme_mode: light
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
@@ -83,7 +84,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://api2.mubu.com/v3/document_image/1ecb451c-4cd3-4dab-a769-460f3f93f037-629850.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
