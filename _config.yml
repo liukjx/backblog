@@ -84,7 +84,7 @@ theme_mode: light
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://api2.mubu.com/v3/document_image/1ecb451c-4cd3-4dab-a769-460f3f93f037-629850.jpg
+avatar: /assets/img/static/B.jpg
 
 # boolean type, the global switch for ToC in posts.
 toc: true
