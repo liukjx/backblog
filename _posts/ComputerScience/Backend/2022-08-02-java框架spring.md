@@ -2,7 +2,8 @@
 layout: post
 title: Java框架Spring
 date: 2022-08-02 08:10 +0800
-tags: 面试 Spring Java JUC
+tags: 面试 Spring Java
+categories: 面试 JAVA面试茶话会
 ---
 ### Spring家族的介绍
 ### IOC原理
