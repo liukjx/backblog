@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Redis面试
-date: 2022-08-02 08:08 +0800
 tags: 面试 Redis
 categories: 面试 JAVA面试茶话会
 ---

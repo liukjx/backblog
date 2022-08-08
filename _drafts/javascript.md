@@ -1,11 +1,9 @@
 ---
 layout: post
 title: JavaScript
-date: 2022-08-03 20:59 +0800
 tags: 前端 JavaScript
 categories: 前端
 ---
-
 ## JavaScript 基础
 ### 2-1 Javascript介绍
 #### 02-js是什么
