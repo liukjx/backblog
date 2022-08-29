@@ -1,12 +1,9 @@
 ---
 layout: post
 title: CFA一级中文精讲3
-date: 2022-07-28 18:51 +0800
 categories: CFA 中文精讲
-tags: CFA 经济 
+tags: CFA 经济
 ---
-
-
 ## 第7章 权益投资
 ### 1 金融市场和市场结构
 #### 1.1 金融市场的主要功能★★

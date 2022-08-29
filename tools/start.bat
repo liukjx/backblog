@@ -16,3 +16,5 @@ jekyll unpublish _posts/2014-01-24-my-new-draft.md
 @REM 输出目录,获取非srt结尾的字符
 tree /f | findstr /EV "srt"
 
+@REM 读书笔记模板
+jekyll draft "《学会提问》读书笔记"

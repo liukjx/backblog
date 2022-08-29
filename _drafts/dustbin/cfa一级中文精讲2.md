@@ -1,9 +1,8 @@
 ---
 layout: post
 title: CFA一级中文精讲2
-date: 2022-07-28 18:46 +0800
 categories: CFA 中文精讲
-tags: CFA 经济 
+tags: CFA 经济
 ---
 ## 第4章 财务报表与分析
 ### 1 财务报表分析简介

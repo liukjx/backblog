@@ -1,11 +1,9 @@
 ---
 layout: post
 title: CFA一级中文精讲1
-date: 2022-07-27 23:55 +0800
 categories: CFA 中文精讲
-tags: CFA 经济 
+tags: CFA 经济
 ---
-
 # CFA一级中文精讲1
 
 ## CFA学习顺序
