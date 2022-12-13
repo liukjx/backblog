@@ -1,0 +1,427 @@
+<!DOCTYPE html><html lang="zh-CN" data-mode="light" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="generator" content="Jekyll v4.3.1" /><meta property="og:title" content="设计模式" /><meta property="og:locale" content="zh_CN" /><meta name="description" content="01 -导论" /><meta property="og:description" content="01 -导论" /><link rel="canonical" href="https://liukjx.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" /><meta property="og:url" content="https://liukjx.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" /><meta property="og:site_name" content="栗少" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2022-09-03T08:58:00+08:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="设计模式" /><meta name="twitter:site" content="@liukjx" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-13T08:12:13+08:00","datePublished":"2022-09-03T08:58:00+08:00","description":"01 -导论","headline":"设计模式","mainEntityOfPage":{"@type":"WebPage","@id":"https://liukjx.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"},"url":"https://liukjx.github.io/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"}</script><title>设计模式 | 栗少</title><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/site.webmanifest"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><meta name="apple-mobile-web-app-title" content="栗少"><meta name="application-name" content="栗少"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.googleapis.com" ><link rel="dns-prefetch" href="https://fonts.googleapis.com" ><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com" ><link rel="dns-prefetch" href="https://fonts.googleapis.com" ><link rel="preconnect" href="https://cdn.jsdelivr.net" ><link rel="dns-prefetch" href="https://cdn.jsdelivr.net" ><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css"><link rel="stylesheet" href="/assets/css/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1/dist/magnific-popup.min.css"> <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script><body data-spy="scroll" data-target="#toc" data-topbar-visible="true"><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper text-center"><div id="avatar"> <a href="/" class="mx-auto"> <img src="/assets/img/static/B.jpg" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="site-title"> <a href="/">栗少</a></div><div class="site-subtitle font-italic">记录成长</div></div><ul class="w-100"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>首页</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>分类</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tag ml-xl-3 mr-xl-3 unloaded"></i> <span>标签</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>归档</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle ml-xl-3 mr-xl-3 unloaded"></i> <span>关于</span> </a></ul><div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center"> <a href="https://github.com/liukjx" aria-label="github" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> <a href="https://twitter.com/liukjx" aria-label="twitter" target="_blank" rel="noopener"> <i class="fab fa-twitter"></i> </a> <a href=" javascript:location.href = 'mailto:' + ['liukjx','qq.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper"><div id="topbar" class="container d-flex align-items-center justify-content-between h-100 pl-3 pr-3 pl-md-4 pr-md-4"> <span id="breadcrumb"> <span> <a href="/"> 首页 </a> </span> <span>设计模式</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> 文章</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="搜索..."> </span> <span id="search-cancel" >取消</span></div></div><div id="main-wrapper" class="d-flex justify-content-center"><div id="main" class="container pl-xl-4 pr-xl-4"><div class="row"><div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4"><div class="post pl-1 pr-1 pl-md-2 pr-md-2"><h1 data-toc-skip>设计模式</h1><div class="post-meta text-muted"> <span> 发表于 <em class="" data-ts="1662166680" data-df="YYYY/MM/DD" data-toggle="tooltip" data-placement="bottom"> 2022/09/03 </em> </span> <span> 更新于 <em class="" data-ts="1670890333" data-df="YYYY/MM/DD" data-toggle="tooltip" data-placement="bottom"> 2022/12/13 </em> </span><div class="d-flex justify-content-between"> <span> 作者 <em> <a href="https://twitter.com/liukjx">栗少</a> </em> </span><div> <span class="readtime" data-toggle="tooltip" data-placement="bottom" title="5987 字"> <em>33 分钟</em>阅读</span></div></div></div><div class="post-content"><h2 id="01--导论"><span class="mr-2">01 -导论</span><a href="#01--导论" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h3 id="什么是-gof"><span class="mr-2">什么是 GOF?</span><a href="#什么是-gof" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>在 1994 年，由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 四人合著出版了一本名为 Design Patterns - Elements of Reusable Object-Oriented Software（中文译名：设计模式 - 可复用的面向对象软件元素） 的书，该书首次提到了软件开发中设计模式的概念。</p><p><strong>对接口编程</strong>而不是对实现编程。 <strong>优先使用对象组合</strong>而不是继承。</p><h3 id="什么是对实现编程"><span class="mr-2">什么是对实现编程?</span><a href="#什么是对实现编程" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>B在使用A的方法,经常使用的是其实现类,而不是接口定义的抽象方法</p><h3 id="设计模式的基石是什么"><span class="mr-2">设计模式的基石是什么?</span><a href="#设计模式的基石是什么" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><ul><li>面向对象的三大特性<ul><li>封装, 零散的内容封装在一起<li>继承, 通过类的继承关系不断进行功能扩展<li>多态, 传入A1调A1,传入A2调A2</ul></ul><h3 id="设计模式总览"><span class="mr-2">设计模式总览</span><a href="#设计模式总览" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><ul><li>创建型模式（Creational Patterns）<ul><li>单例（Singleton）模式<li>原型（Prototype）模式<li>工厂方法（FactoryMethod）模式<li>抽象工厂（AbstractFactory）模式<li>建造者（Builder）模式</ul><li>结构型模式（Structural Patterns）<ul><li>代理（Proxy）模式<li>适配器（Adapter）模式<li>桥接（Bridge）模式<li>装饰（Decorator）模式<li>外观（Facade）模式<li>享元（Flyweight）模式<li>组合（Composite）模式<li>过滤器模式（Filter Pattern）</ul><li>行为型模式（Behavioral Patterns）<ul><li>模板方法（Template Method）模式<li>策略（Strategy）模式<li>命令（Command）模式<li>职责链（Chain of Responsibility）模式<li>状态（State）模式<li>观察者（Observer）模式<li>中介者（Mediator）模式<li>迭代器（Iterator）模式<li>访问者（Visitor）模式<li>备忘录（Memento）模式<li>解释器（Interpreter）模式</ul></ul><h3 id="为什么要分为这三种类型"><span class="mr-2">为什么要分为这三种类型?</span><a href="#为什么要分为这三种类型" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p><img data-src="/assets/img/post/2022-09-03-设计模式20220903091500.png" alt="" data-proofer-ignore></p><p>要完成一个功能,第一步要定义一个类,要有什么属性和方法</p><p>第二步,我们要创建类的对象,才能干活</p><p>第三步,最后调用类对象的相关方法,让类完成相应的功能2</p><p>实际上设计模式是混用的</p><p>设计模式复杂的联动也是框架的核心,当你扒清他的内结构发现清楚他的方法调用以后所有的框架对你来说都是非常easy的</p><h3 id="设计的七大原则"><span class="mr-2">设计的七大原则</span><a href="#设计的七大原则" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>这是我们做设计时需要考虑的原则,但不是必须的原则,如果采用后导致系统复杂度上升一个数量级,就没必要使用这个</p><ul><li><p>开闭原则（Open Closed Principle，OCP）</p><p>软件实体应当对扩展开放，对修改关闭（Software entities should be open for extension，but closed for modification）</p><p>合成复用原则、里氏替换原则相辅相成，都是开闭原则的具体实现规范</p><p><strong>扩展新类而不是修改旧类</strong></p><p>一个功能的新增,修改最好通过增加类的方式解决</p><li><p>里氏替换原则（Liskov Substitution Principle，LSP）</p><p>继承必须确保超类所拥有的性质在子类中仍然成立（Inheritance should ensure that any property proved about supertype objects also holds for subtype objects）</p><p><strong>继承父类而不去改变父类</strong></p><p>子类不去重写父类已经定义好的方法,而是重写父类留给拓展的方法,那么在定义父类的时候就要注意,如果方法是会变动的,就留下扩展的方法定义</p><li><p>依赖倒置原则（Dependence Inversion Principle，DIP）</p><p>高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象（High level modules shouldnot depend upon low level modules.Both should depend upon abstractions.Abstractions should not depend upon details. Details should depend upon abstractions）</p><p><strong>面向接口编程，而不是面向实现类</strong></p><p>A,B是抽象类</p><p>a1,b1分别是其实现类,是细节</p><p>A里面不应该出现b1的引用,a1依赖b1,不能引用b1,而应该是B</p><li><p>单一职责原则（Single Responsibility Principle，SRP）</p><p>一个类应该有且仅有一个引起它变化的原因，否则类应该被拆分（There should never be more than one reason for a class to change）</p><p><strong>每个类只负责自己的事情，而不是变成万能</strong></p><li><p>接口隔离原则（Interface Segregation Principle，ISP）</p><p>一个类对另一个类的依赖应该建立在最小的接口上（The dependency of one class to another one should depend on the smallest possible interface）。</p><p><strong>各个类建立自己的专用接口，而不是建立万能接口</strong></p><li><p>迪米特法则（Law of Demeter，LoD）</p><p>最少知识原则（Least Knowledge Principle，LKP)</p><p>只与你的直接朋友交谈，不跟“陌生人”说话（Talk only to your immediate friends and not to strangers）</p><p><strong>无需直接交互的两个类，如果需要交互，使用中间者</strong></p><p><strong>过度使用迪米特法则会使系统产生大量的中介类，从而增加系统的复杂性，使模块之间的通信效率降低</strong></p><li><p>合成复用原则（Composite Reuse Principle，CRP）</p><p>又叫组合/聚合复用原则（Composition/Aggregate Reuse Principle，CARP）</p><p>软件复用时，要尽量先使用组合或者聚合等关联关系来实现，其次才考虑使用继承关系来实现</p><p><strong>优先组合，其次继承</strong></p><p>组合指的是作为一个对象放到属性中,继承指的是继承所有属性</p></ul><h2 id="02--创建型模式-为什么使用创建型模式"><span class="mr-2">02 -创建型模式-为什么使用创建型模式</span><a href="#02--创建型模式-为什么使用创建型模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>单例(Singleton)模式</p><p>原型(Prototype)模式</p><p>工厂方法(FactoryMethod)模式</p><p>抽象工厂(AbstractFactory)模式</p><blockquote><p>工厂方法和抽象工厂可以统一叫工厂模式</p></blockquote><p>建造者(Builder)模式</p><ul><li><p>创建型设计模式关注点”怎样创建出对象”</p><li><p>“对象的创建和使用分离”</p><li><p>降低系统的耦合度</p><li><p>使用者无需关注对象的创建细节</p><ul><li>对象的创建由相关的工厂来完成:(各种工厂模式)<ul><li>使用者不关注细节</ul><li>对象的创建由一个建造者来完成(建造者模式)<ul><li>使用者关注创建过程中的一些细节</ul><li>对象的创建由原来对象克隆完成 (原型模式)<li>对象再系统中只有一个实例 (单例模式)</ul></ul><h2 id="03--创建型模式-单例的演示"><span class="mr-2">03 -创建型模式-单例的演示</span><a href="#03--创建型模式-单例的演示" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ul><li>一个单一的类,负责创建自己的对象,同时确保系统中只有单个对象被创建</ul><p>单例特点</p><ul><li>某个类只能有一个实例；（构造器私有）<li>它必须自行创建这个实例；（自己编写实例化逻辑）<li>它必须自行向整个系统提供这个实例；（对外提供实例化方法）</ul><h2 id="04--创建型模式-单例的应用场景"><span class="mr-2">04 -创建型模式-单例的应用场景</span><a href="#04--创建型模式-单例的应用场景" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ul><li>什么场景用到？<ul><li>多线程中的线程池<li>数据库的连接池<li>系统环境信息<li>上下文(ServletContext)</ul><li>面试问题<ul><li>系统环境信息(System.getProperties（）)?<li>Spring中怎么保持组件单例的？<li>ServletContext是什么？是单例吗？怎么保证？<ul><li>ApplicationContext:tomcat:一个应用会有一个应用上下文<li>ApplicationContext:Spring:：表示整个I0C容器(怎么保证单例)。ioc容器中有很多组件(怎么保证单例)</ul><li>ApplicationContext是什么？是单例吗？怎么保证？<li>数据库连接池一般怎么创建出来的，怎么保证单实例？</ul></ul><h2 id="05--创建型模式-原型模式"><span class="mr-2">05 -创建型模式-原型模式</span><a href="#05--创建型模式-原型模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>创建重复对象,同时能保证性能</p><p>1、GuiguMyBatis:操作数据库，从数据库里面查出很多记录(70%改变很少)</p><p>2、每次查数据库，查到以后把所有数据都封装一个对象，返回。</p><p>10000 thread:查一个记录：new User(“zhangsan”,18);每次创建一个对象封装并返回</p><p>系统里面就会有10000个User:浪费内存</p><p>3、解决：缓存；查过的保存。如果再查就返回</p><p>从缓存中直接拿容易读到别的进程修改后的内容,因此不能直接给</p><p>希望能快速得到克隆体就需要原型模式</p><p>实现Cloneable接口,重写克隆方法</p><ul><li>什么场景用到？<ul><li>资源优化<li>性能和安全要求<li>一个对象多个修改者的场景。<li>一个对象需要提供给其他对象访问，而且各个调用者可能都需要修改其值时可以考虑使用原型模式拷贝多个对象供调用者使用。</ul></ul><h2 id="06--创建型模式-工厂-简单工厂模式"><span class="mr-2">06 -创建型模式-工厂-简单工厂模式</span><a href="#06--创建型模式-工厂-简单工厂模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>工厂模式(Factory Pattern)提供了一种创建对象的最佳方式。我们不必关心对象的创建细节，只需要根据不同情况获取不同产品即可</p><p>从易到难</p><pre><code class="language-mermaid">graph LR;
+工厂 --&gt;产品
+
+A["简单工厂(Simple Factory)"]--&gt;B["工厂方法(Factory Method)多态工厂"]
+--&gt; C["抽象工厂(Abstract Factory)"]
+</code></pre><p>简单工厂呢产品数量有限,只需要if 判断就能解决</p><p>更多的产品就违反开闭原则</p><pre><code class="language-mermaid">classDiagram
+ class AbstractCar {
+  +String engine;
+  +run()
+ }
+ &lt;&lt;abstract&gt;&gt; AbstractCar
+
+
+ AbstractCar --|&gt; VanCar 
+
+ class VanCar {
+  +VanCar()
+  +run()
+ }
+
+AbstractCar --|&gt; MiniCar
+
+class MiniCar {
+  +MiniCar()
+  +run()
+}
+ 
+</code></pre><pre><code class="language-mermaid">%% 简单工厂适用于产品类型少,使用if else 来判断即可
+classDiagram
+class WuLinSimpleFactory {
+  +newCar(type) AbstractCar
+}
+%% 如果太多的产品,不符合开闭
+</code></pre><h2 id="07--创建型模式-工厂-工厂方法模式"><span class="mr-2">07 -创建型模式-工厂-工厂方法模式</span><a href="#07--创建型模式-工厂-工厂方法模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><pre><code class="language-mermaid">classDiagram
+ class AbstractCar {
+  +String engine;
+  +run()
+ }
+ &lt;&lt;abstract&gt;&gt; AbstractCar
+
+
+ AbstractCar --|&gt; VanCar 
+
+ class VanCar {
+  +VanCar()
+  +run()
+ }
+
+AbstractCar --|&gt; MiniCar
+
+class MiniCar {
+  +MiniCar()
+  +run()
+}
+ 
+</code></pre><p>怎么把一个功能提升一个层次：定义抽象(抽象类，接口)</p><pre><code class="language-mermaid">%% 简单工厂适用于产品类型少,使用if else 来判断即可
+classDiagram
+class AbstractCarFactory {
+  +newCar() AbstractCar
+}
+
+class WulinMinCarFactoy {
+  +newCar() AbstractCar(MiniCar)
+}
+
+AbstractCarFactory --|&gt; WulinMinCarFactoy
+
+class WuliRacingCarFactoy {
+  +newCar() AbstractCar(RacingCar)
+}
+
+AbstractCarFactory --|&gt; WuliRacingCarFactoy
+
+</code></pre><p>之前是一个工厂生产多种车,现在变成一个工厂生产一类车,</p><p>四种产品</p><ul><li>Product 抽象产品 Abstract Car<li>ConcreteProduct 具体产品 MiniCar VanCar<li>Factory 抽象工厂 定义能干什么 AbstractCarFactory<li>ConcreteFactory 具体工厂 生产什么东西</ul><p>方法一多以后就又会变复杂,上面的例子产品都是汽车,如果想生产其他产品,就会出现问题</p><h2 id="08--创建型模式-工厂-抽象工厂模式"><span class="mr-2">08 -创建型模式-工厂-抽象工厂模式</span><a href="#08--创建型模式-工厂-抽象工厂模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>产品等级 和 产品族</p><p>同一种产品的不同类型就是产品等级(小米/华为)</p><p>产品族是指由同一个工厂生产的</p><pre><code class="language-mermaid">classDiagram
+ class AbstractCar {
+  +String engine;
+  +run()
+ }
+ &lt;&lt;abstract&gt;&gt; AbstractCar
+
+
+ AbstractCar --|&gt; VanCar 
+
+ class VanCar {
+  +VanCar()
+  +run()
+ }
+
+AbstractCar --|&gt; MiniCar
+
+class MiniCar {
+  +MiniCar()
+  +run()
+}
+ 
+
+</code></pre><pre><code class="language-mermaid">classDiagram
+class AbstractMask {
+  Integer price
+  +protectedMe() 
+}
+ &lt;&lt;abstract&gt;&gt; AbstractMask
+class N95Mask {
+  +N95()
+  +protectedMe() 
+}
+AbstractMask --|&gt; N95Mask
+
+class CommonMask {
+  +CommonMask()
+  +protectedMe()
+}
+AbstractMask --|&gt; CommonMask
+</code></pre><pre><code class="language-mermaid">classDiagram
+
+class WulinFactory{
+  newCar()* AbstractCar
+  newMask()* AbstractMask
+}
+&lt;&lt;abstract&gt;&gt; WulinFactory
+
+%% 抽象出来一个总的工厂,定义能干什么活
+
+%% 只为生产汽车,别的返回空即可
+class WulinRacingCarFactory{
+  +newCar() AbstractCar(Racing)
+  +newMask() null
+}
+
+WulinFactory --|&gt; WulinRacingCarFactory
+
+class WulinWuhanMaskFactory{
+  +newCar() null
+  +newMask() AbstractMask(N95Mask)
+}
+
+WulinFactory --|&gt; WulinWuhanMaskFactory
+%% 可以有更多的
+</code></pre><h2 id="何时用接口何时用抽象类"><span class="mr-2">何时用接口,何时用抽象类</span><a href="#何时用接口何时用抽象类" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>如果只是方法,可以用接口</p><p>如果有一些属性需要向下传递,则需要抽象类</p><h2 id="09--创建型模式-工厂-工厂模式的思考"><span class="mr-2">09 -创建型模式-工厂-工厂模式的思考</span><a href="#09--创建型模式-工厂-工厂模式的思考" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>如果只有一个产品,抽象工厂退化为工厂方法模式,如果一个产品下面类型数量不多,退化为简单工厂</p><h2 id="10--创建型模式-建造者"><span class="mr-2">10 -创建型模式-建造者</span><a href="#10--创建型模式-建造者" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>构建细节复杂,但是必须暴露给使用者</p><p>屏蔽过程,但不屏蔽细节</p><pre><code class="language-mermaid">classDiagram 
+%% 要生产的手机,不暴露set方法,但是属性还是要看
+%% #表示同包可以访问
+class Phone {
+  #String cpu
+  #String mem
+  #String disk
+  #String cam
+  +getCpu()
+  +getMem()
+  +getDisk()
+  +getCam()
+}
+
+class AbstractBuild {
+  Phone phone
+  coutomCpu(String cpu)* void 
+  coutomMem(String mem)* void 
+  coutomDisk(String disk)* void 
+  coutomCam(String cam)* void 
+  getProduct() Phone
+}
+&lt;&lt;abstract&gt;&gt; AbstractBuild
+
+class XiaomiBuilder {
+  XiaomiBuilder()
+  coutomCpu(String cpu) void 
+  coutomMem(String mem) void 
+  coutomDisk(String disk) void 
+  coutomCam(String cam) void 
+}
+
+AbstractBuild --|&gt; XiaomiBuilder
+</code></pre><h2 id="11--结构型模式-适配器"><span class="mr-2">11 -结构型模式-适配器</span><a href="#11--结构型模式-适配器" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ul><li><strong>结构型模式</strong>关注点“<strong>怎样组合对象/类</strong>？”所以我们关注下类的组合关系<li><strong>类结构型模式</strong>关心类的组合，由多个类可以组合成一个更大的（继承）<li><strong>对象结构型模式</strong>关心类与对象的组合，通过<strong>关联关系</strong>在一个类中定义另一个类的实例对象（组合）<li><p>根据“<strong>合成复用原则</strong>”，在系统中尽量使用关联关系来替代继承关系，因此大部分结构型模式都是对象结构型模式。</p><li><strong>适配器模式</strong>(Adapter Pattern):两个不兼容接口之间适配的桥梁<li><strong>桥接模式</strong>(Bridge Pattern):相同功能抽象化与实现化解耦，抽象与实现可以独立升级。<li><strong>过滤器模式</strong>(Filter、Criteria Pattern):使用不同的标准来过滤一组对象<li><strong>组合模式</strong>(Composite Pattern)：相似对象进行组合，形成树形结构<li><strong>装饰器模式</strong>(Decorator Pattern):向一个现有的对象添加新的功能，同时又不改变其结构<li><strong>外观模式</strong>(Facade Pattern)：向现有的系统添加一个接口，客户端访问此接口来隐藏系统的复杂性。<li><strong>享元模式</strong>(Flyweight Pattern):尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象<li><strong>代理模式</strong>(Proxy Pattern):一个类代表另一个类的功能</ul><p>将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，适配器模式分为类结构型模式（继承）和对象结构型模式（组合）两种，前者（继承）类之间的耦合度比后者高，且要求程序员了解现有组件库中的相关组件的内部结构，所以应用相对较少些。</p><p>别名也可以是Wrapper,包装器</p><pre><code class="language-mermaid">classDiagram 
+
+class Translator {
+  &lt;&lt;interface&gt;&gt;
+  translate(String content) String
+}
+
+class Player {
+  &lt;&lt;interface&gt;&gt;
+  play() String
+}
+
+ Player ..|&gt; MoviePlayer
+%% 之前只能正常的播放字幕,需要一个适配器翻译成日文
+ class MoviePlayer {
+  play()
+ }
+
+%% 有两种方法引入翻译机制,继承或新增对象,继承在play方法里调用translate方法
+
+    Player ..|&gt; JPMovieAdapter
+    Translator --|&gt; JPMovieAdapter
+ class JPMovieAdapter {
+  -Player target
+  -Translator translator
+  +JPMovieAdapter(Player player)
+  play()
+ }
+</code></pre><h2 id="12--结构型模式-适配器一些场景"><span class="mr-2">12 -结构型模式-适配器一些场景</span><a href="#12--结构型模式-适配器一些场景" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>Tomcat如何将Request流转为标准Request;</p><p>·tomcat.Request接口</p><div class="table-wrapper"><table><tbody><tr><td>·serv<td>et.Request:接口</table></div><p>tomcat===CoyoteAdapte ===ServletRequest</p><p>Spring AOP中的AdvisorAdapter是什么</p><p>Spring MVC中经典的HandlerAdapter是什么</p><p>SpringBoot中WebMvcConfi gurer Adapter为什么存在又取消</p><h2 id="13--结构型模式-桥接模式"><span class="mr-2">13 -结构型模式-桥接模式</span><a href="#13--结构型模式-桥接模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>系统设计期间，如果这个类里面的一些东西，会扩展很多，这个东西就应该分离出来</p><p>抽象化(Abstraction)角色：定义抽象类，并包含一个对实现化对象的引用。</p><p>扩展抽象化(Refined Abstraction)角色：是抽象化角色的子类，实现父类中的业务方法，并通过组合关系调用实现化角色中的业务方法</p><p>实现化(Implementor)角色：定义实现化角色的接口，供扩展抽象化角色调用。</p><p><strong>适配器是在用的过程中,需要添加的,桥接是在设计阶段就要添加的</strong></p><pre><code class="language-mermaid">classDiagram
+class AbstractSale {
+  &lt;&lt;abstract&gt;&gt;
+  -String type
+  -Integer price
+  +AbstractSale(String type,Integer price)
+  getSaleInfo() String
+}
+
+AbstractSale --|&gt; OfflineSale
+class OfflineSale {
+  +OfflineSale(String type,Integer price)
+}
+
+AbstractSale --|&gt; OnlineSale
+class OnlineSale {
+  +OnlineSale(String type,Integer price)
+}
+</code></pre><pre><code class="language-mermaid">classDiagram
+
+class Phone {
+  String info
+  String price
+}
+
+class AbstractPhone {
+  AbstractSale sale
+  getPhone()* String
+  +setSale(AbstractSale sale)
+}
+
+AbstractPhone --|&gt; IPhone
+AbstractPhone --|&gt; MiPhone
+
+class IPhone {
+getPhone()
+}
+
+class MiPhone{
+getPhone()
+}
+</code></pre><p>桥接节省了类的创建</p><p>真正会引起此类变化的一个维度直接抽取出来,通过组合的方式接起来</p><h2 id="14--结构型模式-理解适配器与装饰器"><span class="mr-2">14 -结构型模式-理解适配器与装饰器</span><a href="#14--结构型模式-理解适配器与装饰器" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>都可以称为Wrapper</p><p>适配器是连接两个类,可以增强一个类</p><p>装饰器是增强一个类</p><h2 id="15--结构型模式-装饰器"><span class="mr-2">15 -结构型模式-装饰器</span><a href="#15--结构型模式-装饰器" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><pre><code class="language-mermaid">%% 抽象构建
+classDiagram
+class ManTikTok {
+  &lt;&lt;interface&gt;&gt;
+  tiktok() void
+}
+
+ManTikTok ..&gt; LeiTikTok
+%% 原始的直播,被装饰对象
+class LeiTikTok {
+  +tiktok()
+}
+
+ManTikTok --|&gt; TiktokDecorator
+%% 抖音直播装饰器
+%% 抽象装饰器
+class TiktokDecorator {
+  &lt;&lt;interface&gt;&gt;
+  tiktok() void
+  enable()
+}
+
+TiktokDecorator ..&gt; MeiYanDecorator
+%% 美颜装饰器
+%% 在tiktok里面先调用enable方法,然后再调用传入的manTikTok的tiktok方法
+class MeiYanDecorator {
++ManTikTok mantiktok
+MeiYanDecorator(ManTikTok manTikTok)
+tiktok() void
+enable() void
+}
+</code></pre><p>调用别人的美颜功能就是适配器,调用自己写的美颜就是装饰器</p><p>已存在的类,在某一天发现功能不够,就可以用装饰器</p><p>SpringSessiont中如何进行session与redis关联？HttpRequestWrapper MyBatisPlus提取了QueryWrapper,这是什么？ Spr ing中的BeanWrapper是做什么？ Spring Webflux中的WebHandlerDecorator?</p><h2 id="16--结构型模式-代理模式-静态代理"><span class="mr-2">16 -结构型模式-代理模式-静态代理</span><a href="#16--结构型模式-代理模式-静态代理" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>代理模式(Proxy Pattern),给某一个对象提供一个代理，并由代理对象控制对原对象的引用，对象结构型模式。这种也是静态代理</p><p>静态代理和装饰器一摸一样</p><pre><code class="language-mermaid">classDiagram
+
+%% 抽象主题,被代理角色
+
+class ManTikTok {
+  &lt;&lt;interface&gt;&gt;
+  tiktok() void
+}
+
+ManTikTok ..&gt; LeiTikTok
+%% 主体,当前
+class LeiTikTok {
+  +tiktok()
+}
+
+ManTikTok ..&gt; TiktokPrroxy
+%% 代理,和被代理对象,属于同一个接口
+%% 把代理对象传进去
+%% 在tiktok中调用被代理对象的tiktok ,可以增强,也可以替换
+class TiktokPrroxy {
+  -ManTikTok manTikTok
+  +TiktokProxy(ManTikTok manTikTok)
+  +tiktok()
+}
+</code></pre><p>静态代理就是装饰器</p><p>装饰器模式是代理模式的一种</p><h2 id="17--结构型模式-代理模式-jdk动态代理"><span class="mr-2">17 -结构型模式-代理模式-jdk动态代理</span><a href="#17--结构型模式-代理模式-jdk动态代理" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>静态代理 不同的代理对象,要创建不同的静态代理类</p><pre><code class="language-mermaid">classDiagram
+class ManTikTok {
+  &lt;&lt;interface&gt;&gt;
+  tiktok() void
+}
+
+ManTikTok ..&gt; LeiTikTok
+%% 主体,当前
+class LeiTikTok {
+  +tiktok()
+}
+</code></pre><p>JDK动态代理,代理对象和目标对象的共同点在于都是同一个接口</p><div class="language-java highlighter-rouge"><div class="code-header"> <span data-label-text="Java"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre><td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">JdkTiktokProxy</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="nc">InvocationHandler</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="no">T</span> <span class="nf">getProxy</span><span class="o">(</span><span class="no">T</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="no">T</span> <span class="n">target</span><span class="o">;</span>
+    <span class="nc">JdkTiktokProxy</span> <span class="o">(</span><span class="no">T</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">target</span><span class="o">=</span><span class="n">target</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="c1">// 想要获取代理对象,可以调用Proxy的方法,创建代理对象的实例</span>
+    <span class="c1">// 传入当前被代理对象的类加载器,</span>
+    <span class="c1">// 当前被代理对象的接口,</span>
+    <span class="c1">// 执行处理器,当前被代理对象执行目标方法的时候我们使用</span>
+    <span class="nc">Proxy</span><span class="o">.</span><span class="na">newProxyInstance</span><span class="o">(</span><span class="nc">ClassLoader</span> <span class="n">loader</span><span class="o">,</span>
+                            <span class="nc">Class</span><span class="o">&lt;?&gt;[]</span> <span class="n">interfaces</span><span class="o">,</span>
+                            <span class="nc">InvocationHandler</span> <span class="n">h</span><span class="o">)</span>
+    <span class="nc">Proxy</span><span class="o">.</span><span class="na">newProxyInstance</span><span class="o">(</span><span class="n">t</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getClassLoader</span><span class="o">(),</span>
+                            <span class="n">t</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getinterfaces</span><span class="o">(),</span>
+                            <span class="k">new</span> <span class="nf">JdkTiktokProxy</span><span class="o">(</span><span class="n">t</span><span class="o">))</span>
+
+    <span class="c1">// 实现了invokationHandler接口,可以重写invoke方法</span>
+    <span class="c1">// 定义目标方法的拦截逻辑</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">Object</span> <span class="nf">invoke</span><span class="o">(</span><span class="nc">Object</span> <span class="n">proxy</span><span class="o">,</span>
+                        <span class="nc">Method</span> <span class="n">method</span><span class="o">,</span>
+                        <span class="nc">Object</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Throwable</span> <span class="o">{</span>
+      <span class="c1">//添加增强功能</span>
+      <span class="c1">// 反射执行                    </span>
+      <span class="nc">Object</span> <span class="n">invode</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="na">invoke</span><span class="o">(</span><span class="n">target</span><span class="o">,</span> <span class="n">args</span><span class="o">);</span>
+      <span class="k">return</span> <span class="n">invode</span><span class="o">;</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></table></code></div></div><p>只能代理接口的方法,自己的方法不能被代理,JDK缺点就是一定要实现接口</p><p>CGlib可以解决这个问题</p><h2 id="18--结构型模式-代理模式-cglib"><span class="mr-2">18 -结构型模式-代理模式-cglib</span><a href="#18--结构型模式-代理模式-cglib" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><div class="language-java highlighter-rouge"><div class="code-header"> <span data-label-text="Java"><i class="fas fa-code small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre><td class="rouge-code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CglibProxy</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="no">T</span> <span class="nf">createProxy</span><span class="o">(</span><span class="no">T</span> <span class="n">t</span><span class="o">){</span>
+    <span class="c1">// 1.创建一个增强器</span>
+    <span class="nc">Enhancer</span> <span class="n">enhancer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Enhancer</span><span class="o">();</span>
+
+    <span class="c1">// 2.设置要增强哪个类的功能,增强器为这个类动态创建一个子类</span>
+    <span class="n">enhancer</span><span class="o">.</span><span class="na">setSuperclass</span><span class="o">(</span><span class="n">t</span><span class="o">.</span><span class="na">getClass</span><span class="o">);</span>
+
+    <span class="c1">//3. 设置回调,参数是一个接口Callback,叫做Methodintercepter,拦截父类的所有方法</span>
+    <span class="n">enhancer</span><span class="o">.</span><span class="na">setCallback</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">MethodInterceptor</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="nc">Object</span> <span class="nf">intercept</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">,</span>
+                                <span class="nc">Method</span> <span class="n">method</span><span class="o">,</span>
+                                <span class="nc">Object</span><span class="o">[]</span> <span class="n">args</span><span class="o">,</span>
+                                <span class="nc">MethodProxy</span> <span class="n">proxy</span><span class="o">){</span>
+        <span class="c1">// 编写拦截逻辑,写增强逻辑</span>
+        
+        <span class="c1">// 目标方法进行执行</span>
+        <span class="nc">Object</span> <span class="n">invoke</span> <span class="o">=</span> <span class="n">proxy</span><span class="o">.</span><span class="na">invokeSuper</span><span class="o">(</span><span class="n">obj</span><span class="o">,</span><span class="n">args</span><span class="o">);</span>
+        <span class="c1">// 注意不要调invoke方法,自己调自己会递归</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">)</span>
+
+    <span class="nc">Object</span> <span class="n">o</span> <span class="o">=</span> <span class="n">enhancer</span><span class="o">.</span><span class="na">create</span><span class="o">();</span>
+    <span class="k">return</span> <span class="o">(</span><span class="no">T</span><span class="o">)</span><span class="n">o</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</pre></table></code></div></div><h2 id="19--结构型模式-代理模式-场景"><span class="mr-2">19 -结构型模式-代理模式-场景</span><a href="#19--结构型模式-代理模式-场景" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h2 id="20--结构型模式-外观模式"><span class="mr-2">20 -结构型模式-外观模式</span><a href="#20--结构型模式-外观模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>又称门面模式,为复杂子系统提供一致的接口,使得子系统更容易被访问</p><p>分布式系统的网关,将很多东西统一对外暴露</p><h2 id="20--结构型模式-组合模式"><span class="mr-2">20 -结构型模式-组合模式</span><a href="#20--结构型模式-组合模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>组合模式基本上一直在使用</p><h2 id="21--结构型模式-享元模式"><span class="mr-2">21 -结构型模式-享元模式</span><a href="#21--结构型模式-享元模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>当有大量的对象一个人用完以后,另一个人还要用,这时候要怎么处理</p><p>就是”池技术”</p><p>享元模式就需要考虑什么可以共享,什么不能共享</p><p>享元模式一般和简单工厂搭配,因为产品就一个Connect</p><h3 id="享元和原型的区别"><span class="mr-2">享元和原型的区别?</span><a href="#享元和原型的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>享元返回的是本人</p><p>原型返回的是克隆</p><h2 id="22--行为模式-模板模式"><span class="mr-2">22 -行为模式-模板模式</span><a href="#22--行为模式-模板模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>行为型模式分为类行为模式和对象行为模式</p><p>类型为模式:通过继承来得到行为</p><p>对象行为模式:组合来得到行为</p><h3 id="行为型模式有哪些"><span class="mr-2">行为型模式有哪些?</span><a href="#行为型模式有哪些" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p><strong>模板方法</strong>(Template Method)模式：父类定义算法骨架，某些实现放在子类</p><p>策略(Strategy)模式：每种算法独立封装，根据不同情况使用不同算法策略</p><p>状态(State)模式：每种状态独立封装，不同状态内部封装了不同行为</p><p>命令(Command)模式：将一个请求封装为一个对象，使发出请求的责任和执行请求的责任分割开</p><p>职责链(Chain of Responsibility)模式：所有处理者封装为链式结构，依次调用</p><p>备忘录(Memento)模式：把核心信息抽取出来，可以进行保存</p><p><strong>解释器</strong>(Interpreter)模式：定义语法解析规则</p><p>观察者(Observer)模式：维护多个观察者依赖，状态变化通知所有观察者</p><p>中介者(Mediator)模式：取消类/对象的直接调用关系，使用中介者维护</p><p>迭代器(Iterator)模式：定义集合数据的遍历规则</p><p>访问者(Visitor)模式：分离对象结构，与元素的执行算法</p><p>除了<strong>模板方法</strong>模式和<strong>解释器</strong>模式是<strong>类行为型模式</strong>，其他的全部属于<strong>对象行为型</strong>模式</p><p>模板方法,定义抽象类,类里面可以实现某些步骤,关键步骤可以留给子类实现</p><p>总体还是按照父类的</p><h2 id="23--行为模式-策略模式"><span class="mr-2">23 -行为模式-策略模式</span><a href="#23--行为模式-策略模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>定义了一系列算法,把每个算法封装起来,可以相互替换,算法的变化不会影响到客户</p><p>定义一个算法接口,再具体策略里面实现方法</p><p>目前对策略模式的理解还是在重写方法,</p><h2 id="24--行为模式-状态模式"><span class="mr-2">24 -行为模式-状态模式</span><a href="#24--行为模式-状态模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>把有状态的对象,把复杂的”判断逻辑”提取到不同的状态对象中,允许状态对象在其内部状态变化时改变其行为</p><h3 id="状态模式和策略模式的区别"><span class="mr-2">状态模式和策略模式的区别?</span><a href="#状态模式和策略模式的区别" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><p>状态模式多了一个状态流转的方法</p><p>可以给外界设置状态的方法或直接next流转到下一个状态</p><h2 id="25--行为模式-中介者模式"><span class="mr-2">25 -行为模式-中介者模式</span><a href="#25--行为模式-中介者模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>把网状交互关系,换成星状交互关系</p><p>之前一个状态变化,需要把其他相关所有都遍历一边,如果用中介者</p><h2 id="26--行为模式-观察者模式"><span class="mr-2">26 -行为模式-观察者模式</span><a href="#26--行为模式-观察者模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>观察者又叫发布订阅模式</p><p>挨个通知</p><h2 id="28--行为模式-备忘录模式"><span class="mr-2">28 -行为模式-备忘录模式</span><a href="#28--行为模式-备忘录模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h2 id="29--行为模式-解释器模式"><span class="mr-2">29 -行为模式-解释器模式</span><a href="#29--行为模式-解释器模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h2 id="30--行为模式-命令模式"><span class="mr-2">30 -行为模式-命令模式</span><a href="#30--行为模式-命令模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h2 id="31--行为模式-迭代器模式"><span class="mr-2">31 -行为模式-迭代器模式</span><a href="#31--行为模式-迭代器模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h2 id="32--行为模式-访问者模式"><span class="mr-2">32 -行为模式-访问者模式</span><a href="#32--行为模式-访问者模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h2 id="33--行为模式-访问者模式-幸好很少"><span class="mr-2">33 -行为模式-访问者模式-幸好很少</span><a href="#33--行为模式-访问者模式-幸好很少" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h2 id="34--行为模式-简单责任链模式"><span class="mr-2">34 -行为模式-简单责任链模式</span><a href="#34--行为模式-简单责任链模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h2 id="35--行为模式-完整责任链模式"><span class="mr-2">35 -行为模式-完整责任链模式</span><a href="#35--行为模式-完整责任链模式" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h2 id="36--小总结"><span class="mr-2">36 -小总结</span><a href="#36--小总结" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>Spring源码分析-01-gradle急速安装与配置入门 Spring源码分析-02-源码环境搭建</p></div><div class="post-tail-wrapper text-muted"><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> 本文由作者按照 <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> 进行授权</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">分享</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F+-+%E6%A0%97%E5%B0%91&url=https%3A%2F%2Fliukjx.github.io%2Fposts%2F%25E8%25AE%25BE%25E8%25AE%25A1%25E6%25A8%25A1%25E5%25BC%258F%2F" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F+-+%E6%A0%97%E5%B0%91&u=https%3A%2F%2Fliukjx.github.io%2Fposts%2F%25E8%25AE%25BE%25E8%25AE%25A1%25E6%25A8%25A1%25E5%25BC%258F%2F" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://t.me/share/url?url=https%3A%2F%2Fliukjx.github.io%2Fposts%2F%25E8%25AE%25BE%25E8%25AE%25A1%25E6%25A8%25A1%25E5%25BC%258F%2F&text=%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F+-+%E6%A0%97%E5%B0%91" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-toggle="tooltip" data-placement="top" title="分享链接" data-title-succeed="链接已复制！"> </i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted"><div class="access"><div id="access-lastmod" class="post"><div class="panel-heading">最近更新</div><ul class="post-content pl-0 pb-1 ml-1 mt-2"><li><a href="/posts/%E8%8B%B1%E8%AF%AD%E9%9F%B3%E6%A0%87/">英语音标 英语</a><li><a href="/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a><li><a href="/posts/jvm-%E5%AD%A6%E4%B9%A0/">JVM 学习</a><li><a href="/posts/%E7%AC%AC5%E8%8A%82-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/">第5节 归并排序及其相关面试题</a><li><a href="/posts/%E7%AC%AC4%E8%8A%82-%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">第4节 一些基础的数据结构</a></ul></div><div id="access-tags"><div class="panel-heading">热门标签</div><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95/">算法</a> <a class="post-tag" href="/tags/%E5%B7%A6%E7%A5%9E/">左神</a> <a class="post-tag" href="/tags/%E4%BD%93%E7%B3%BB%E7%8F%AD/">体系班</a> <a class="post-tag" href="/tags/%E8%8B%B1%E8%AF%AD/">英语</a> <a class="post-tag" href="/tags/%E8%AF%AD%E6%B3%95/">语法</a> <a class="post-tag" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a> <a class="post-tag" href="/tags/%E6%96%B0%E6%89%8B%E7%8F%AD/">新手班</a> <a class="post-tag" href="/tags/ai/">AI</a> <a class="post-tag" href="/tags/java/">Java</a> <a class="post-tag" href="/tags/juc/">JUC</a></div></div></div><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script><div id="toc-wrapper" class="pl-0 pr-4 mb-5"><div class="panel-heading pl-3 pt-2 mb-2">文章内容</div><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 pl-3 pr-3 pr-xl-4 mt-5"><div id="related-posts" class="mb-2 mb-sm-4"><h3 class="pt-2 mb-4 ml-1" data-toc-skip>相关文章</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/%E7%AC%AC5%E8%8A%82-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"><div class="card-body"> <em class="small" data-ts="1668637140" data-df="YYYY/MM/DD" > 2022/11/17 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>第5节 归并排序及其相关面试题</h3><div class="text-muted small"><p> 内容： 归并排序 题目： 归并排序的递归和非递归实现 在一个数组中，一个数左边比它小的数的总和，叫该数的小和 所有数的小和累加起来，叫数组小和 例子： [1,3,4,2,5] 1左边比1小的数：没有 3左边比3小的数：1 4左边比4小的数：1、3 2左边比2小的数：1 5左边比5小的数：1、3、4、 2 所以数组的小和为1+1+3+1+1+3+4+2=16 给定一个数组arr，求...</p></div></div></a></div><div class="card"> <a href="/posts/%E7%AC%AC4%E8%8A%82-%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><div class="card-body"> <em class="small" data-ts="1665578220" data-df="YYYY/MM/DD" > 2022/10/12 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>第4节 一些基础的数据结构</h3><div class="text-muted small"><p> 单链表、双链表 栈、队列 递归的物理实质 评估递归复杂度的Master公式 Master公式 形如 $T ( N ) = a * T (\frac{N}{b}) + O ( N ^ d )$ (abd都是常数) 如果$log_ba &amp;lt; d$复杂度为$O(N^d)$ 如果$log_ba &amp;gt; d$复杂度为$O(N^{log_ba})$ 如果$log_ba == d$复杂度为...</p></div></div></a></div><div class="card"> <a href="/posts/%E7%AC%AC2%E8%8A%82-%E8%AE%A4%E8%AF%86%E5%A4%8D%E6%9D%82%E5%BA%A6-%E5%AF%B9%E6%95%B0%E5%99%A8-%E4%BA%8C%E5%88%86%E6%B3%95/"><div class="card-body"> <em class="small" data-ts="1665321720" data-df="YYYY/MM/DD" > 2022/10/09 </em><h3 class="pt-0 mt-1 mb-3" data-toc-skip>第2节 认识复杂度、对数器、二分法</h3><div class="text-muted small"><p> 评估算法优劣的核心指标 时间复杂度、空间复杂度、估算方式、意义 常数时间的操作 选择排序、冒泡排序、插入排序 最优解 对数器 二分法 题目： 选择排序及其对数器验证 冒泡排序及其对数器验证 插入排序及其对数器验证 有序数组中找到num 有序数组中找到&amp;gt;=num最左的位置 有序数组中找到&amp;lt;=num最右的位置 局部最小值问题 定义何为局部最小值： arr[...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/redis-%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0/" class="btn btn-outline-primary" prompt="上一篇"><p>Redis 课程学习</p></a> <a href="/posts/jvm-%E5%AD%A6%E4%B9%A0/" class="btn btn-outline-primary" prompt="下一篇"><p>JVM 学习</p></a></div></div></div></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-sm-11 post-content"><div id="search-hints"><div id="access-tags"><div class="panel-heading">热门标签</div><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/%E7%AE%97%E6%B3%95/">算法</a> <a class="post-tag" href="/tags/%E5%B7%A6%E7%A5%9E/">左神</a> <a class="post-tag" href="/tags/%E4%BD%93%E7%B3%BB%E7%8F%AD/">体系班</a> <a class="post-tag" href="/tags/%E8%8B%B1%E8%AF%AD/">英语</a> <a class="post-tag" href="/tags/%E8%AF%AD%E6%B3%95/">语法</a> <a class="post-tag" href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a> <a class="post-tag" href="/tags/%E6%96%B0%E6%89%8B%E7%8F%AD/">新手班</a> <a class="post-tag" href="/tags/ai/">AI</a> <a class="post-tag" href="/tags/java/">Java</a> <a class="post-tag" href="/tags/juc/">JUC</a></div></div></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><footer><div class="container pl-lg-4 pr-lg-4"><div class="d-flex justify-content-between align-items-center text-muted ml-md-3 mr-md-3"><div class="footer-left"><p class="mb-0"> © 2022 <a href="https://twitter.com/liukjx">栗少</a>. <span data-toggle="tooltip" data-placement="top" title="除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。">保留部分权利。</span></p></div><div class="footer-right"><p class="mb-0"> 本站由 <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> 生成，采用 <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a> 主题。</p></div></div></div></footer><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">搜索结果为空</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/lozad/dist/lozad.min.js,npm/clipboard@2/dist/clipboard.min.js"></script> <script src="https://cdn.jsdelivr.net/combine/npm/dayjs@1/dayjs.min.js,npm/dayjs@1/locale/zh.min.js,npm/dayjs@1/plugin/relativeTime.min.js,npm/dayjs@1/plugin/localizedFormat.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.bundle.min.js"></script> <script defer src="/unregister.js"></script>
